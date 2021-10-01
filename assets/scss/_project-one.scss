@@ -1,0 +1,385 @@
+/*===========================
+    2. Project One
+===========================*/
+.page-wrapper.project-one {
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	.container-fluid {
+		overflow-x: hidden;
+	}
+	.page-left-content {
+		padding-left: 75px;
+		padding-right: 75px;
+		padding-top: 90px;
+		@media #{$laptop} {
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 60px;
+		}
+		@media #{$lg} {
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 30px;
+		}		
+		@media only screen and (max-width: 992px) {
+			margin-top: 0;
+			padding-bottom: 180px;
+		}		
+		@media only screen and (max-width: 767px) {
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-top: 45px;
+		}		
+		@media only screen and (max-width: 450px) {
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 45px;
+		}
+	}
+	.page-right-column {
+		background: #f8f8f8;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.title {
+		padding-top: 8.5vh;
+		@media #{$md} {
+			padding-top: 40px;
+		}
+		@media #{$xs} {
+			padding-top: 40px;
+		}
+		span {
+			font-size: 22px;
+			font-weight: bold;
+			padding-top: 34px;
+			padding-bottom: 36px;
+			@media #{$lg} {
+				font-size: 18px;
+				padding-bottom: 30px;
+			}
+			@media #{$xs} {
+				font-size: 16px;
+				padding-bottom: 30px;
+			}
+		}
+		h1 {
+			font-size: 130px;
+			line-height: 1;
+			font-weight: 900;
+			color: #000000;
+			@media #{$large} {
+				font-size: 130px;
+			}			
+			@media #{$laptop} {
+				font-size: 85px;
+			}
+			@media #{$lg} {
+				font-size: 65px;
+			}
+			@media #{$md} {
+				font-size: 100px;
+			}
+			@media #{$xs} {
+				font-size: 60px;
+			}
+			@media only screen and (max-width: 767px) {
+				font-size: 75px;
+			}
+		}
+		.main-btn {
+			display: inline-block;
+			padding: 25px 65px;
+			background-color: #f8f8f8;
+			font-weight: 800;
+			font-family: $pop;
+			color: #000000;
+			font-size: 18px;
+			text-transform: uppercase;
+			margin-top: 60px;
+			@include transition(0.3s);
+			&:hover {
+				background-color: #000000;
+				color: #ffffff;
+			}
+			@media #{$xs} {
+				padding: 20px 40px;
+			}
+		}
+	}
+	.social-icon {
+		margin-top: 12vh;
+		@media #{$md} {
+			margin-top: 50px;
+		}
+		@media #{$xs} {
+			margin-top: 50px;
+		}
+		ul {
+			li {
+				display: inline-block;
+				margin-right: 6px;
+				&.title {
+					color: #000000;
+					font-weight: bold;
+					margin-right: 20px;
+					padding-top: 0;
+					@media #{$xs} {
+						display: block;
+						margin-right: 0;
+						margin-bottom: 10px;
+					}
+					@media #{$sm} {
+						display: inline-block;
+					}
+				}
+				a {
+					height: 35px;
+					width: 35px;
+					line-height: 35px;
+					background-color: #000;
+					color: #fff;
+					border-radius: 50%;
+					display: block;
+					text-align: center;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.page-right-top {
+		// position: absolute;
+		// right: 0;
+		// top: 0;
+		width: 100%;
+		height: 60vh;
+		overflow: hidden;
+		@media #{$lg} {
+			height: 50vh;
+		}
+		@media #{$md} {
+			width: 100%;
+			height: 400px;
+		}
+		@media #{$xs} {
+			width: 100%;
+			height: 300px;
+		}
+		&.video {
+			.wrapper-video {
+				min-width: 100%;
+				min-height: 100%;
+				object-fit: cover;
+				// position: absolute;
+				// left: 50%;
+				// top: 50%;
+				// transform: translate(-50%, -50%);
+			}
+		}
+		&.map {
+			.contact-map {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		#particles-js {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.days-count {
+		position: absolute;
+		top: 195px;
+		left: -111px;
+		background-color: #04050a;
+		height: 225px;
+		width: 225px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media only screen and (max-width: 992px) {
+			top: -120px;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@media #{$xs} {
+			height: 200px;
+			width: 200px;
+		}
+		.count-content {
+			text-align: center;
+			h2 {
+				font-size: 60px;
+				color: #ffffff;
+				font-weight: 900;
+				letter-spacing: 2px;
+				@media #{$large} {
+					font-size: 60px;
+				}				
+				@media #{$xs} {
+					font-size: 40px;
+				}
+			}
+			span {
+				font-size: 18px;
+				color: #ffffff;
+				font-weight: 700;
+				@media #{$xs} {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.page-right-space {
+		height: 615px;
+	}
+	.custom {
+		@media #{$lg} {
+			-ms-flex: 0 0 91.666667%;
+		    flex: 0 0 91.666667%;
+		    max-width: 91.666667%;
+		}		
+		@media #{$sm} {
+			-ms-flex: 0 0 70%;
+		    flex: 0 0 70%;
+		    max-width: 70%;
+		}
+	}
+	.page-right-content {
+		@media #{$md} {
+			padding-bottom: 50px;
+		}
+		.title {
+			margin-bottom: 30px;
+			margin-top: 35px;
+			padding-top: 0;
+			@media #{$lg} {
+				margin-top: 15px;
+			}	
+			span {
+				font-size: 20px;
+				font-weight: 700;
+				color: #222222;
+				padding-bottom: 0;
+				margin-bottom: 10px;
+				@media #{$laptop} {
+					font-size: 18px;
+				}
+				@media #{$lg} {
+					font-size: 16px;
+				}			
+				@media #{$xs} {
+					font-size: 15px;
+				}
+			}
+			h2 {
+				font-size: 60px;
+				color: #252525;
+				font-weight: 900;
+				@media #{$large} {
+					font-size: 60px;
+				}				
+				@media #{$laptop} {
+					font-size: 45px;
+				}			
+				@media #{$lg} {
+					font-size: 45px;
+				}
+				@media #{$xs} {
+					font-size: 35px;
+					margin-top: 10px;
+				}
+				@media #{$sm} {
+					font-size: 60px;
+					margin-top: 10px;
+				}
+			}			
+		}
+		.contact-information {
+			font-weight: 500;
+			font-size: 17px;
+			color: #252525;
+			text-align: left;
+			margin-left: 100px;
+			margin-right: 100px;
+			padding-bottom: 50px;
+			@media #{$laptop} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@media #{$lg} {
+				padding-bottom: 55px;
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+			@media #{$md} {
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+			@media #{$xs} {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 50%;
+			}
+			@media only screen and (max-width: 750px) and (min-width: 600px) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100%;
+			}
+			@media only screen and (max-width: 450px) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 60%;
+			}
+			.info-title {
+				position: relative;
+				padding-left: 40px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+				h4 {
+					font-size: 24px;
+					color: #252525;
+				}
+				&::after {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					background-color: #04050a;
+					content: '';
+					width: 163px;
+				}
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-size: 30px;
+					color: #000000;
+				}
+			}
+			p{
+				&.w-600{
+					font-weight: 600;
+				}
+			}
+			@media #{$xs} {
+				.location,
+				.contact {
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+	@media #{$lg} {
+		.col-lg-8.offset-lg-3.custom {
+			max-width: 100%;
+			flex: 0 0 100%;
+			margin-left: 0;
+		}
+	}
+}

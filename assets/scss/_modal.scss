@@ -1,0 +1,103 @@
+/*===========================
+   Modal
+===========================*/
+.modal {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.modal.subscibe-modal {
+	.modal-body {
+		padding: 80px 50px;
+		text-align: center;
+		@media #{$xs} {
+			padding: 50px 20px;
+		}
+		span {
+			font-weight: 700;
+			color: #000000;
+			text-transform: uppercase;
+			padding-bottom: 5px;
+		}
+
+		h2 {
+			font-weight: 900;
+			font-size: 45px;
+			@media #{$xs} {
+				font-size: 30px;
+			}
+			@media #{$sm} {
+				font-size: 45px;
+			}
+		}
+		p {
+			font-size: 18px;
+			font-weight: 500;
+			margin-top: 20px;
+			@media #{$xs} {
+				font-size: 16px;
+			}
+		}
+		form {
+			position: relative;
+			padding: 0 20px;
+			@media #{$xs} {
+				padding: 0;
+			}
+			@media #{$md} {
+				padding: 0;
+			}
+			margin-top: 50px;
+			input {
+				width: 100%;
+				height: 50px;
+				border: none;
+				background: transparent;
+				border: 1px solid #121213;
+				padding-left: 15px;
+				padding-right: 150px;
+			}
+			button {
+				position: absolute;
+				right: 20px;
+				height: 100%;
+				width: 140px;
+				background-color: #121213;
+				font-weight: 700;
+				color: #fff;
+				text-transform: uppercase;
+				border: none;
+				@include transition(0.3s);
+				@media #{$xs} {
+					right: 0;
+				}
+				@media #{$md} {
+					right: 0;
+				}
+				&:hover {
+					background-color: #000000;
+				}
+			}
+		}
+		a.close-modal {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			color: #bfbfbf;
+			font-size: 30px;
+			opacity: 0.6;
+		}
+	}
+	&.modal-two {
+		.modal-body form {
+			input {
+				border-color: #070229;
+			}
+			button {
+				background-color: #070229;
+				&:hover {
+					background-color: #0008f1;
+				}
+			}
+		}
+	}
+}
