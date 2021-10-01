@@ -1,0 +1,296 @@
+/*===========================
+   3. Project Four
+===========================*/
+.page-wrapper.project-four {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url(../images/image-version-4.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 99999;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100%;
+    background-color: #020f15;
+    opacity: 0.35;
+    z-index: -1;
+  }
+  header {
+    padding: 30px 0;
+    .container-fluid {
+      padding-left: 50px;
+      padding-right: 50px;
+      @media #{$xs} {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    .social-icon {
+      text-align: right;
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 6px;
+          &.title {
+            color: #ffffff;
+            font-weight: 700;
+            margin-right: 20px;
+            @media #{$md} {
+              font-size: 15px;
+            }
+            @media #{$xs} {
+              display: none;
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+          }
+          a {
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .page-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+    @media #{$md} {
+      padding-top: 100px;
+    }
+    @media #{$xs} {
+      padding-top: 120px;
+    }
+    .coming-soon-title {
+      position: relative;
+      margin-bottom: 40px;
+      text-align: center;
+      &::before,
+      &::after {
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 2px;
+        background-color: #ffffff;
+        content: "";
+        @media #{$lg} {
+          left: -60px;
+        }
+        @media #{$md} {
+          left: 70px;
+        }
+        @media #{$xs} {
+          top: -10px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+      &::after {
+        left: auto;
+        right: -10px;
+        @media #{$lg} {
+          right: -60px;
+        }
+        @media #{$md} {
+          right: 70px;
+        }
+        @media #{$xs} {
+          display: none;
+        }
+      }
+      h3 {
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+    h1.title {
+      font-size: 110px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 0.9;
+      margin-bottom: 50px;
+      text-align: center;
+      @media #{$lg} {
+        font-size: 80px;
+      }
+      @media #{$md} {
+        font-size: 80px;
+      }
+      @media #{$xs} {
+        font-size: 50px;
+        line-height: 1;
+      }
+      @media #{$sm} {
+        font-size: 75px;
+        line-height: 1;
+      }
+    }
+    .counter-wrap {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 45px;
+        li {
+          text-align: center;
+          @media #{$xs} {
+            width: 35%;
+            float: left;
+            margin-bottom: 30px;
+          }
+          span.time-counter {
+            display: block;
+            height: 96px;
+            width: 114px;
+            text-align: center;
+            line-height: 96px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            font-size: 42px;
+            font-weight: 900;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 18px;
+            @media #{$xs} {
+              width: 100%;
+              height: 85px;
+              line-height: 85px;
+              font-size: 35px;
+            }
+            @media #{$sm} {
+              width: 100%;
+              height: 100px;
+              line-height: 100px;
+              font-size: 45px;
+            }
+          }
+          span.label {
+            display: block;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 700;
+          }
+          &.semicolon {
+            font-weight: 900;
+            color: #ffffff;
+            font-size: 60px;
+            margin-right: 20px;
+            margin-left: 20px;
+            @media #{$xs} {
+              width: 10%;
+              &.hide-phone {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-btn {
+      display: inline-block;
+      padding: 22px 60px;
+      background-color: #ffffff;
+      font-weight: 800;
+      font-family: $pop;
+      color: #000000;
+      font-size: 18px;
+      text-transform: uppercase;
+      @include transition(0.3s);
+      @media #{$xs} {
+        padding: 20px 40px;
+      }
+      &:hover {
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+  &.image-slide-version {
+    background-image: none;
+    &::before {
+      background-color: #0054ff;
+      opacity: 0.6;
+      z-index: -1;
+    }
+    .slider-wrap {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      .owl-stage-outer,
+      .owl-stage,
+      .owl-item {
+        height: 100%;
+      }
+      .image-slider {
+        height: 100%;
+        width: 100%;
+        .single-slider {
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .slide-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+        }
+        .owl-item.active .single-slider .slide-img {
+          @include animation(slide 20s linear infinite);
+        }
+      }
+    }
+  }
+  &.video-version {
+    background-image: none;
+  }
+  .video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    .wrapper-video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  #particles-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}

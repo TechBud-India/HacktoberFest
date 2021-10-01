@@ -1,0 +1,455 @@
+/*===========================
+    2. Project Five
+===========================*/
+.page-wrapper.project-five {
+	padding: 45px 0;
+	@media #{$md} {
+		padding-top: 0;
+	}
+	@media #{$xs} {
+		padding-top: 0;
+	}
+	.container-fluid {
+		@media (min-width: 1600px) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+	.page-left-content {
+		height: 100%;
+		@media #{$md} {
+			text-align: center;
+			padding-bottom: 75px;
+		}
+		@media #{$xs} {
+			text-align: center;
+			padding-bottom: 60px;
+		}
+		.logo {
+			@media #{$md} {
+				padding-top: 60px;
+			}
+			@media #{$xs} {
+				padding-top: 60px;
+			}
+		}
+		.title {
+			margin-top: 11vh;
+			span {
+				font-size: 25px;
+				color: #232323;
+				font-weight: 700;
+				position: relative;
+				line-height: 30px;
+				margin-bottom: 25px;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: -215px;
+					height: 2px;
+					width: 190px;
+					background-color: #000000;
+					@media #{$md} {
+						width: 170px;
+						left: 0;
+						right: 0;
+						top: 100%;
+					}
+					@media #{$xs} {
+						top: -15px;
+						left: 0;
+						right: 0;
+						margin-left: auto;
+						margin-right: auto;
+						width: 100px;
+						transform: translate(0);
+					}
+				}
+			}
+			h1 {
+				font-size: 105px;
+				font-weight: 900;
+				line-height: 1.05;
+				color: #000000;
+				@media only screen and (min-width: 1601px) and (max-width: 1820px) {
+					font-size: 98px;
+				}
+				@media #{$laptop} {
+					font-size: 80px;
+				}
+				@media #{$lg} {
+					font-size: 70px;
+				}
+				@media #{$md} {
+					font-size: 105px;
+					line-height: 1.2;
+				}
+				@media #{$xs} {
+					font-size: 60px;
+					line-height: 1.2;
+				}
+			}
+		}
+		.main-btn {
+			display: inline-block;
+			padding: 25px 65px;
+			background-color: #252525;
+			font-weight: 800;
+			font-family: $pop;
+			color: #ffffff;
+			font-size: 18px;
+			text-transform: uppercase;
+			margin-top: 60px;
+			@include transition(0.3s);
+			@media #{$xs} {
+				padding: 20px 40px;
+			}
+			&:hover {
+				background-color: #000000;
+				color: #ffffff;
+			}
+		}
+	}
+	.page-right-content {
+		.counter-box {
+			height: 75vh;
+			width: 100%;
+			position: relative;
+			z-index: 1;
+			background-size: cover;
+			background-position: center;
+			@media #{$laptop} {
+				height: 710px;
+			}
+			@media #{$lg} {
+				height: 665px;
+			}
+			@media #{$md} {
+				margin-left: -15px;
+				margin-right: -15px;
+				width: auto;
+			}
+			@media #{$xs} {
+				margin-left: -15px;
+				margin-right: -15px;
+				height: 500px;
+				width: auto;
+			}
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.65);
+				z-index: -1;
+				content: '';
+			}
+			.counter-box-content {
+				text-align: center;
+				h1 {
+					font-size: 90px;
+					font-weight: 500;
+					color: #ffffff;
+					position: relative;
+					margin-bottom: 30px;
+					@media #{$laptop} {
+						font-size: 90px;
+					}
+					@media #{$lg} {
+						font-size: 50px;
+					}
+					@media #{$xs} {
+						font-size: 50px;
+					}
+					&:before {
+						content: '';
+					    width: 75px;
+					    height: 2px;
+					    background: #ffffff;
+					    display: block;
+					    overflow: hidden;
+					    margin-left: auto;
+					    margin-right: auto;
+					    position: absolute;
+					    bottom: -15px;
+					    left: 0;
+					    right: 0;
+					}
+				}
+				.countdown {
+					color: #ffffff;
+					font-size: 60px;
+					font-weight: 800;
+					@media #{$laptop} {
+						font-size: 48px;
+					}
+					@media #{$lg} {
+						font-size: 30px;
+					}
+					@media #{$xs} {
+						font-size: 30px;
+					}
+				}
+			}
+			.video {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: -1;
+				overflow: hidden;
+				&::before{
+					position: absolute;
+					content: '';
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					background: rgba(0, 0, 0, 0.65);
+				}
+				.wrapper-video {
+					object-position: center;
+					object-fit: cover;
+					min-height: 100%;
+					min-width: 100%;
+				}
+			}
+			#particles-js {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.slider-wrap {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -2;
+				.owl-stage-outer,
+				.owl-stage,
+				.owl-item {
+					height: 100%;
+				}
+				.image-slider {
+					height: 100%;
+					width: 100%;
+					.single-slider {
+						background-size: cover;
+						background-position: center;
+						width: 100%;
+						height: 100%;
+						position: relative;
+						.slide-img {
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							z-index: -10;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+						}
+					}
+					.owl-item.active .single-slider .slide-img {
+						@include animation(slide 20s linear infinite);
+					}
+				}
+			}
+		}
+	}
+	.locations {
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		@media #{$md} {
+			text-align: center;
+		}
+		@media #{$xs} {
+			text-align: center;
+			ul {
+				li {
+					margin-right: 10px;
+					&.locations-title {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		@media #{$sm} {
+			text-align: center;
+		}
+		ul {
+			li {
+				display: inline-block;
+				font-size: 16px;
+				color: #0b0b0b;
+				font-weight: 600;
+				margin-right: 15px;
+				@media only screen and (min-width: 1601px) and (max-width: 1820px) {
+					margin-right: 8px;
+				}
+				&.locations-title {
+					font-weight: 700;
+					margin-right: 25px;
+					font-size: 20px;
+					border-bottom: 2px solid #000000;
+					i {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.contacts {
+		text-align: right;
+		margin-top: 35px;
+		@media #{$md} {
+			text-align: center;
+		}
+		@media #{$xs} {
+			text-align: center;
+		}
+		ul {
+			@media only screen and (min-width: 992px) {
+				display: flex;
+			    flex-direction: row-reverse;
+			    align-items: center;
+			}
+			li {
+				display: inline-block;
+				font-size: 16px;
+				color: #0b0b0b;
+				font-weight: 600;
+				margin-left: 15px;
+				@media only screen and (min-width: 1601px) and (max-width: 1820px) {
+					margin-right: 8px;
+				}
+				&.contact-title {
+					font-weight: 700;
+					margin-left: 25px;
+					font-size: 20px;
+					border-bottom: 2px solid #000000;
+					i {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+		@media #{$xs} {
+			text-align: center;
+			ul {
+				li {
+					margin-right: 10px;
+					&.contact-title {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		&.hide-large {
+			display: none;
+			@media #{$md} {
+				display: block;
+				text-align: center;
+			}
+			@media #{$xs} {
+				display: block;
+				text-align: center;
+				ul {
+					li {
+						margin-left: 0;
+						margin-right: 10px;
+						&.contact-title {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+			@media #{$sm} {
+				text-align: center;
+			}
+		}
+	}
+	.social-icon {
+		text-align: right;
+		margin-bottom: 40px;
+		@media #{$md} {
+			margin-bottom: 0;
+			margin-top: 40px;
+		}
+		@media #{$xs} {
+			margin-bottom: 0;
+			margin-top: 40px;
+		}
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+		ul {
+			li {
+				display: inline-block;
+				margin-right: 6px;
+				&.title {
+					color: #000000;
+					font-weight: 800;
+					margin-right: 20px;
+					padding-top: 0;
+					@media #{$xs} {
+						display: block;
+					}
+					@media #{$sm} {
+						display: inline-block;
+					}
+				}
+				a {
+					height: 35px;
+					width: 35px;
+					line-height: 35px;
+					background-color: #000;
+					color: #fff;
+					border-radius: 50%;
+					display: block;
+					text-align: center;
+					font-size: 12px;
+				}
+			}
+		}
+		&.hide-large {
+			display: none;
+			@media #{$md} {
+				display: block;
+				text-align: center;
+				ul {
+					li {
+						&.title {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+			@media #{$xs} {
+				display: block;
+				text-align: center;
+				ul {
+					li {
+						&.title {
+							margin-top: 0;
+							margin-right: 0;
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+			@media #{$sm} {
+				text-align: center;
+			}
+		}
+	}
+}
