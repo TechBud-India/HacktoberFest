@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class bulletproperty : MonoBehaviour
 {
+    // Damage is hardcoded to 30 
     public int damage = 30;
-    // Start is called before the first frame update
+    
+    // This is used whenever an object enters another object in space when the onTrigger porperty is ticked
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         enemyscript enemy = hitInfo.GetComponent<enemyscript>();

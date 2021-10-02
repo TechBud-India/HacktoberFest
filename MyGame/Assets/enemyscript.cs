@@ -23,7 +23,7 @@ public class enemyscript : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Ded");
+        Debug.Log("*********** Player Died! *************");
         Destroy(gameObject);
     }
 
