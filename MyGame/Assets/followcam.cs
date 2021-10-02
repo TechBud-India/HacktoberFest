@@ -6,6 +6,7 @@ public class followcam : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
 
+    //FixedUpdate is used instead of Update whenever we're dealing with physics to get good mechanics.
     void FixedUpdate()
     {
         
